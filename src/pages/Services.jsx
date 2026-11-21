@@ -27,11 +27,12 @@ export default function Services() {
       />
       <PageHero
         eyebrow="Our Services"
-        compact
+        image="v-living-kitchen"
+        alt="Open living and kitchen interior with warm lighting (sample render)"
         title={<>Complete Interior Solutions,<br className="hidden lg:block" /> Thoughtfully Delivered.</>}
         text="From a single room to a complete home, every service is designed and coordinated with the same attention to detail."
       />
-      <section className="container-site pb-20 sm:pb-28">
+      <section className="container-site py-20 sm:py-28">
         <Reveal><span className="eyebrow">What We Do</span></Reveal>
         <Reveal delay={0.08}><h2 className="h-section mt-6">Our Expertise</h2></Reveal>
         <div className="mt-12"><PillarCards items={expertise} /></div>

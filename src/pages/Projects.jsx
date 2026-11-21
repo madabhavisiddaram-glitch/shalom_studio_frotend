@@ -13,9 +13,9 @@ export default function Projects() {
   return (
     <Page>
       <Seo title="Interior Design Projects & Portfolio" description="Explore living rooms, bedrooms, modular kitchens and complete home interiors designed for Bangalore homes." />
-      <PageHero eyebrow="Portfolio" title="Every Space Has a Story." text="Browse interiors by room or property type. Open any project to see the full gallery.">
-        <p className="mt-8 inline-flex items-start gap-2 bg-champagne/60 px-4 py-3 text-sm text-stone-500">
-          <Info size={16} className="mt-0.5 shrink-0 text-gold-dark" />
+      <PageHero eyebrow="Portfolio" image="d-living-2" alt="Living room interior (sample render)" title="Every Space Has a Story." text="Browse interiors by room or property type. Open any project to see the full gallery.">
+        <p className="mt-8 inline-flex items-start gap-2 border border-ivory/20 bg-charcoal/40 px-4 py-3 text-sm text-ivory/80 backdrop-blur-sm">
+          <Info size={16} className="mt-0.5 shrink-0 text-gold-light" />
           The projects currently shown are sample 3D design renders with placeholder details.
         </p>
       </PageHero>
