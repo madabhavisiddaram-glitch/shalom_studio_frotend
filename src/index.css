@@ -36,7 +36,7 @@
   .field-label { @apply mb-1 block text-[11px] font-medium uppercase tracking-[0.18em] text-stone-500; }
 
   .placeholder-block { @apply border border-dashed border-gold/60 bg-champagne/40 px-5 py-4 text-sm text-stone-500; }
-  .sample-tag { @apply inline-flex items-center gap-1.5 bg-ivory/90 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-charcoal backdrop-blur; }
+  .sample-tag { @apply inline-flex items-center gap-1.5 bg-ivory/90 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-charcoal md:backdrop-blur; }
 }
 
 @layer utilities {
