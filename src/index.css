@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { @apply font-sans bg-ivory text-charcoal; font-feature-settings: 'ss01', 'cv11'; }
+  h1, h2, h3, h4 { @apply font-serif font-normal tracking-tight; }
+  ::selection { background: #B49A72; color: #fff; }
+  :focus-visible { outline: 2px solid #B49A72; outline-offset: 3px; }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-12; }
+  .eyebrow { @apply inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-eyebrow text-gold-dark; }
+  .eyebrow::before { content: ''; @apply block h-px w-8 bg-gold; }
+  .eyebrow-light { @apply text-gold-light; }
+  .display { @apply font-serif text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-7xl xl:text-[5.5rem]; }
+  .h-section { @apply font-serif text-[2.1rem] leading-[1.1] sm:text-5xl lg:text-[3.6rem]; }
+  .lead { @apply text-base leading-relaxed text-stone-500 sm:text-lg; }
+  .rule { @apply h-px w-full bg-charcoal/10; }
+
+  .btn { @apply inline-flex items-center justify-center gap-3 px-7 py-4 text-[12px] font-medium uppercase tracking-[0.2em] transition-all duration-500 ease-lux disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-dark { @apply btn bg-charcoal text-ivory hover:bg-gold; }
+  .btn-gold { @apply btn bg-gold text-white hover:bg-gold-dark; }
+  .btn-light { @apply btn bg-ivory text-charcoal hover:bg-gold hover:text-white; }
+  .btn-outline { @apply btn border border-charcoal/30 text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-ivory; }
+  .btn-outline-light { @apply btn border border-white/50 text-white hover:border-white hover:bg-white hover:text-charcoal; }
+
+  .link-line { @apply relative inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.2em]; }
+  .link-line::after { content: ''; @apply absolute -bottom-1 left-0 h-px w-full origin-left scale-x-100 bg-current transition-transform duration-500 ease-lux; }
+  .link-line:hover::after { @apply origin-right scale-x-0; }
+
+  .field { @apply w-full border-0 border-b border-charcoal/20 bg-transparent px-0 py-3 text-[15px] text-charcoal placeholder:text-stone-400 focus:border-gold focus:outline-none focus:ring-0 transition-colors; }
+  .field-label { @apply mb-1 block text-[11px] font-medium uppercase tracking-[0.18em] text-stone-500; }
+
+  .placeholder-block { @apply border border-dashed border-gold/60 bg-champagne/40 px-5 py-4 text-sm text-stone-500; }
+  .sample-tag { @apply inline-flex items-center gap-1.5 bg-ivory/90 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-charcoal backdrop-blur; }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .text-balance { text-wrap: balance; }
+}
